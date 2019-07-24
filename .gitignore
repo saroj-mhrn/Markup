@@ -1,5 +1,5 @@
 node_modules
-markup/assets/compiled
+assets/compiled
 .DS_Store
 .thumbs
 .idea
