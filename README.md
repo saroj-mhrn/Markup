@@ -2,19 +2,9 @@
 Laravel mix
 
 Install
-
-npm install
-
-or
-
-yarn
+`npm install`
 
 
 
 watch:
-
-npm run watch
-
-or
-
-yarn watch
+`npm run watch`
