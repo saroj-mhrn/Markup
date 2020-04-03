@@ -131,7 +131,7 @@
     }
 }
 
-@if ($usegrid == true) {
+@if $usegrid {
     @include make-grid-columns;
 
     // pull left
