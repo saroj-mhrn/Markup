@@ -15,3 +15,7 @@
 @function white($opacity){
     @return rgba(white, $opacity);
 }
+
+@function color($color, $tone: '1') {
+  @return map-get(map-get($colors, $color), $tone);
+}

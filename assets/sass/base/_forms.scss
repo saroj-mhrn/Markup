@@ -63,10 +63,10 @@ input[type='submit'] {
 
         [data-select] {
             display: block;
-            border: 1px solid $gray;
+            border: 1px solid color(black,2);
             border-radius: 3px;
             color: rgba(#4A4A4A, .46);
-            background-color: $white;
+            background-color: color(white);
             padding: 9px 33px 9px 15px;
             position: relative;
             text-decoration: none;
@@ -77,14 +77,14 @@ input[type='submit'] {
                 content: '\e901';
                 font: 7px/1 icomoon;
                 right: 13px;
-                color: $black;
+                color: color(black);
                 @include box-align(vc);
             }
 
             &.active,
             &.selected,
             &:hover {
-                color: $black;
+                color: color(black);
             }
 
             &.active {
@@ -99,15 +99,15 @@ input[type='submit'] {
             top: 100%;
             left: 0;
             right: 0;
-            border: 1px solid $gray;
-            background-color: $white;
-            box-shadow: 0 0 5px rgba($black,.02);
+            border: 1px solid color(black,2);
+            background-color: color(white);
+            box-shadow: 0 0 5px color(black, 1a2);
             box-shadow: 0px 12px 14px rgba(0, 0, 0, 0.3);
             margin-top: -2px;
             border-radius: 0 0 3px 3px;
 
             li {
-                border-bottom: 1px solid rgba($black, 0.2);
+                border-bottom: 1px solid color(black, 1a2);
 
                 &:last-child {
                     border-bottom: none;
@@ -117,15 +117,15 @@ input[type='submit'] {
             a {
                 text-decoration: none;
                 display: block;
-                color: $black;
+                color: color(black);
                 padding: 10px 14px;
                 @include animate(color background-color);
             }
 
             .active a,
             a:hover {
-                background-color: $black;
-                color: $white;
+                background-color: color(black);
+                color: color(white);
             }
         }
     }
@@ -141,7 +141,7 @@ input[type='submit'] {
 
             &:checked + .nice-label:before,
             & + .nice-label:hover:before {
-                border-color: $black;
+                border-color: color(black);
             }
         }
 
@@ -153,8 +153,8 @@ input[type='submit'] {
             
             &:checked + .nice-label:before {
                 content: '\e907';
-                background-color: $black;
-                color: $white;
+                background-color: color(black);
+                color: color(white);
             }
         }
 
@@ -166,7 +166,7 @@ input[type='submit'] {
             &:checked + .nice-label:before {
                 background-color: transparent;
                 content: '\e917';
-                color: $black;
+                color: color(black);
                 font-size: 12px;
                 padding-left: 1px;
             }
@@ -185,8 +185,8 @@ input[type='submit'] {
                 top: 1px;
                 width: 20px;
                 height: 20px;
-                border: 1px solid $gray;
-                background-color: $white;
+                border: 1px solid color(black,2);
+                background-color: color(white);
                 font: 10px/1 icomoon;
                 display: flex;
                 justify-content: center;
