@@ -291,16 +291,22 @@ $animation-speed: .3s !default;
 // @font-face code generator
 // *** demo ***
 // @include font-face("font-name", ("../fonts/font-file-name"), normal, normal );
-@mixin font-face($font, $url, $weight: normal, $style: normal){
+@mixin font-face($font-name, $url, $weight: normal, $style: normal, $icomoon: false){
   @font-face {
-    font-family: $font;
-    src:url('#{$url}.eot?5sv48p');
-    src:url('#{$url}.eot?#iefix5sv48p') format('embedded-opentype'),
-      url('#{$url}.svg?5sv48p') format('svg'),
-      url('#{$url}.ttf?5sv48p') format('truetype'),
-      url('#{$url}.woff?5sv48p') format('woff');
+    font-family: $font-name;
     font-weight: $weight;
     font-style: $style;
+    @if $icomoon {
+      font-display: block;
+      src: url('#{$url}.eot?5sv48p');
+      src: url('#{$url}.eot?#iefix5sv48p') format('embedded-opentype'),
+        url('#{$url}.svg?5sv48p') format('svg'),
+        url('#{$url}.ttf?5sv48p') format('truetype'),
+        url('#{$url}.woff?5sv48p') format('woff');
+    } @else {
+      src: url('#{$url}.woff2') format('woff2'), 
+           url('#{$url}.woff') format('woff');
+    }
   }
 }
 
@@ -598,4 +604,31 @@ $animation-speed: .3s !default;
     &:-moz-placeholder {@content}
     &:-ms-input-placeholder {@content}
     &.placeholder {@content}
+}
+
+// font responsive
+// @include fl(desktop-fz, tablet-fz, mobile-fz, desktop-lineheight, tablet-lineheight, mobile-lineheight)
+@mixin fl($df, $tf:false, $mf:false, $dl:false, $tl:false, $ml:false) {
+  font-size: $df * 1px;
+  @if $dl {
+    line-height: $dl;
+  }
+
+  @include media('<desktop') {
+    @if $tf {
+    font-size: $tf * 1px;
+    }
+    @if $tl {
+      line-height: $tl;
+    }
+  }
+
+  @include media('<tablet') {
+    @if $mf {
+        font-size: $mf * 1px;
+    }
+    @if $ml {
+      line-height: $ml;
+    }
+  }
 }

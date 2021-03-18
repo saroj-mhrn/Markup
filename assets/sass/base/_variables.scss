@@ -67,12 +67,13 @@ $headings-color: inherit !default;
 $animation-speed: 0.3s;
 
 // nice select
-$niceSelect: true;
-$niceCheckRadio: true;
+$niceSelect: false;
+$niceCheckRadio: false;
 
 // grid 
 $usegrid: true;
-$gutter-width: 30px;  // gutter for desktop greater than 768
-$gutter-width-mobile: 30px;  // gutter for mobiles
-$container-width: 1280px;
 $grid-count: 12;
+$grid-gutter: 30px;
+$container-width: 1280px;
+// $grid-gutter-mobile: 20px;  // Define if the mobile gutter is different
+// $container-gutter: 40px; // Define if the container gutter is different than grid gutter
