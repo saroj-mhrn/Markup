@@ -290,8 +290,8 @@ $animation-speed: .3s !default;
 
 // @font-face code generator
 // *** demo ***
-// @include font-face("font-name", ("../fonts/font-file-name"), normal, normal );
-@mixin font-face($font-name, $url, $weight: normal, $style: normal, $icomoon: false){
+// @include font-face("local font name", "font-name", ("../fonts/font-file-name"), normal, normal );
+@mixin font-face($local-font-name:false, $font-name, $url, $weight: normal, $style: normal, $icomoon: false){
   @font-face {
     font-family: $font-name;
     font-weight: $weight;
@@ -304,8 +304,9 @@ $animation-speed: .3s !default;
         url('#{$url}.ttf?5sv48p') format('truetype'),
         url('#{$url}.woff?5sv48p') format('woff');
     } @else {
-      src: url('#{$url}.woff2') format('woff2'), 
+      src: local('#{$local-font-name}'), local('#{$font-name}'),  url('#{$url}.woff2') format('woff2'), 
            url('#{$url}.woff') format('woff');
+      font-display: swap;
     }
   }
 }

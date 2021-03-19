@@ -21,6 +21,10 @@ $colors: (
     )
 );
 
+$dir: '../..';
+$font-path: '#{$dir}/fonts';
+$image-path: '#{$dir}/images';
+
 $helvetica: 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
 $base-font-sans-serif: $helvetica;
 $base-font-serif: 'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
