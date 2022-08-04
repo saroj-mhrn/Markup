@@ -1,15 +1,10 @@
 # markup-weback
 Laravel mix
 
-Install
-`npm install`
+Install: `npm install`
 
 
-
-watch:
-`npm run watch`
+Watch: `npm run watch`
 
 
-Deployment
-
-`npm run production`
+Deployment: `npm run production`
