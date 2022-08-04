@@ -8,3 +8,8 @@ Install
 
 watch:
 `npm run watch`
+
+
+Deployment
+
+`npm run production`
